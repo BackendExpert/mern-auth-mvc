@@ -1,0 +1,22 @@
+{
+  "name": "mern-auth-mvc",
+  "version": "1.0.0",
+  "description": "MERN Supported Auth",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BackendExpert/mern-auth-mvc.git"
+  },
+  "keywords": [
+    "MERN-Auth"
+  ],
+  "author": "jehankandy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BackendExpert/mern-auth-mvc/issues"
+  },
+  "homepage": "https://github.com/BackendExpert/mern-auth-mvc#readme"
+}
