@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import LoginImg from '../assets/Login.png'
-import DefaultFormInput from '../components/Forms/DefaultFormInput'
-import FormBtn from '../components/Buttons/FormBtn'
+import DefaultFormInput from '../../components/Forms/DefaultFormInput'
+import FormBtn from '../../components/Buttons/FormBtn'
 import axios from 'axios'
 import { FaUserAlt, FaKey  } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom'

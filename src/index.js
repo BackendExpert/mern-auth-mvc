@@ -6,11 +6,8 @@ const argv = require('yargs').argv;
 const inquirer = require('inquirer');
 
 
-const Loginsource = argv.source || path.join(__dirname, '../temps/Auth/Default/Login.jsx');
+const Loginsource = argv.source || path.join(__dirname, '../temps/Auth/Default');
 const Logindestination = argv.destination || path.join(process.cwd(), 'src/pages/Auth');
-
-const SignUpsource = argv.source || path.join(__dirname, '../temps/Auth/Default/SignUp.jsx');
-const SignUpdestination = argv.destination || path.join(process.cwd(), 'src/pages/Auth');
 
 const Componentsource = argv.source || path.join(__dirname, '../temps/components');
 const Componentdestination = argv.destination || path.join(process.cwd(), 'src/components');
@@ -18,13 +15,17 @@ const Componentdestination = argv.destination || path.join(process.cwd(), 'src/c
 const Assestssource = argv.source || path.join(__dirname, '../temps/assets');
 const Assestsdestination = argv.destination || path.join(process.cwd(), 'src/assets');
 
+const Appsource = argv.source || path.join(__dirname, '../temps/App');
+const Appdestination = argv.destination || path.join(process.cwd(), 'src');
+
+
 
 async function CreateDefaultFrontEndLoginSignUp (){
     try {
         await fs.copy(Loginsource, Logindestination);
-        await fs.copy(SignUpsource, SignUpdestination);
         await fs.copy(Componentsource, Componentdestination);
         await fs.copy(Assestssource, Assestsdestination);
+        await fs.copy(Appsource, Appdestination);
         console.log('Default Login and SignUp Templates Created Successful..');
     }
     catch (error) {
