@@ -44,10 +44,8 @@ async function CreateServerBackend (){
     }
 }
 
-
-async function main(){
-    try {
-        
+async function RunClient (){
+    try {        
         const answers = await inquirer.prompt([
             {
                 type: 'list',
@@ -74,6 +72,25 @@ async function main(){
     }
     catch (error) {
         console.log(error)
+    }
+}
+
+
+async function main(){
+    const command = process.argv[1];
+
+    switch (command) {
+        case "create-mern-auth-mvc-client":
+            RunClient();
+            break;
+        case "create-mern-auth-mvc-server":
+            CreateServerBackend();
+            break;
+        default:
+            console.error("Unknown command. Please use one of the following:");
+            console.error("  - create-mern-auth-mvc-client");
+            console.error("  - create-mern-auth-mvc-server");
+            process.exit(1); 
     }
 }
 
