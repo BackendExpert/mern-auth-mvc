@@ -11,3 +11,9 @@ const Logindestination = argv.destination || path.join(process.cwd(), 'src/pages
 
 const SignUpsource = argv.source || path.join(__dirname, '../temps/Auth/Default/SignUp.jsx');
 const SignUpdestination = argv.destination || path.join(process.cwd(), 'src/pages/Auth');
+
+const Componentsource = argv.source || path.join(__dirname, '../temps/components');
+const Componentdestination = argv.destination || path.join(process.cwd(), 'src/components');
+
+const Componentsource = argv.source || path.join(__dirname, '../temps/components');
+const Componentdestination = argv.destination || path.join(process.cwd(), 'src/components');
