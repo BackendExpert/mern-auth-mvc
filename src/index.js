@@ -18,7 +18,8 @@ const Assestsdestination = argv.destination || path.join(process.cwd(), 'src/ass
 const Appsource = argv.source || path.join(__dirname, '../temps/App');
 const Appdestination = argv.destination || path.join(process.cwd(), 'src');
 
-
+const Serversource = argv.source || path.join(__dirname, '../server');
+const Serverdestination = argv.destination || path.join(process.cwd(), '../');
 
 async function CreateDefaultFrontEndLoginSignUp (){
     try {
@@ -33,9 +34,20 @@ async function CreateDefaultFrontEndLoginSignUp (){
     }
 }
 
+async function CreateServerBackend (){
+    try {
+        await fs.copy(Loginsource, Logindestination);
+        console.log('Server Environment Initialized Successful ');
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+
 
 async function main(){
     try {
+        
         const answers = await inquirer.prompt([
             {
                 type: 'list',

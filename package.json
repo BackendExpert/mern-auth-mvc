@@ -4,7 +4,8 @@
   "description": "MERN Supported Auth",
   "main": "src/index.js",
   "bin": {
-    "create-mern-auth-mvc": "src/index.js"
+    "create-mern-auth-mvc-client": "src/index.js",
+    "create-mern-auth-mvc-server": "src/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
