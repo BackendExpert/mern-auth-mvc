@@ -76,22 +76,10 @@ async function RunClient (){
 }
 
 
-async function main(){
-    const command = process.argv[1];
+async function main() {
+    const [,, func] = process.argv;
 
-    switch (command) {
-        case "create-mern-auth-mvc-client":
-            RunClient();
-            break;
-        case "create-mern-auth-mvc-server":
-            CreateServerBackend();
-            break;
-        default:
-            console.error("Unknown command. Please use one of the following:");
-            console.error("  - create-mern-auth-mvc-client");
-            console.error("  - create-mern-auth-mvc-server");
-            process.exit(1); 
-    }
+    
 }
 
 main()
